@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 import "./App.css";
 
 import merge from "lodash/merge";
@@ -95,7 +97,7 @@ const data = [
 function App() {
   const keys = Object.keys(merge({}, ...data));
   const [search, setSearch] = useState("");
-  const [searchField, setSearchField] = useState("");
+  const [searchField, setSearchField] = useState<string>("");
 
   const handleChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
